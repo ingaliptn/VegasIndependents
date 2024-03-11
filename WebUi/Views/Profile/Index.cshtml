@@ -1,0 +1,129 @@
+﻿@using Domain.Models
+@model WebUi.Controllers.ProfileViewModel
+
+@{
+    ViewData["Title"] = "Profile Page";
+}
+
+<div class="main_container">
+    <div class="row">
+        <div class="breadcums_block">
+            <ol class="breadcrumb">
+                <li>
+                    <a title="Las Vegas Independent Escorts" href="/">
+                        Independent
+                        Escorts
+                    </a>
+                </li>
+                <li class="active"> <span itemprop="title">@Model.EscortName</span> </li>
+            </ol>
+        </div>
+        <h1>Las Vegas Independent Escort @Model.EscortName</h1>
+        <div class="col-sm-6 col-md-6 col-lg-6">
+            <div class="profile_right_col">
+                <div class="profile_preview_img">
+                    <img class="img-responsive" src="/images/escorts/@Model.FileImages.First().FileName"
+                         alt="@Model.EscortName - independent girl in Las Vegas"
+                         title="@Model.EscortName - independent girl in Las Vegas" />
+                </div>
+                <p class="hotphone_no">
+                    @*<a href="tel:+1702-430-2691"> *@
+                    <a href="@Html.Raw("tel:+1" + Model.City)">
+                        Call Me Directly Now
+                        <strong>@Model.City</strong>
+                    </a></< /strong>
+                </p>
+            </div>
+        </div>
+        <div class="col-sm-6 col-md-6 col-lg-6">
+            <div class="profile_left_col">
+                <h2>About @Model.EscortName</h2>
+
+                <p>@Html.Raw(Model.Description)</p>
+
+                <h2>Images</h2>
+
+                <div class="thumb_img">
+                    @foreach (var p in @Model.FileImages)
+                    {
+                        <a class="fancybox" data-fancybox-group="escorts"
+                           href="/images/escorts/@p.FileName">
+                            <img src="/images/escorts/@p.FileName"
+                                 alt="Bella photo 2" title="@Model.EscortName photo"
+                                 width="89"
+                                 class="img-responsive" />
+                        </a>
+                    }
+                </div>
+
+                <div class="profile_information clearfix">
+                    <div class="filter_block">
+                        <div class="filter_block_title">
+                            <h2>Details</h2>
+                        </div>
+                        <div class="filter_block_content">
+                            <div class="">
+                                <table class="table">
+                                    <tr>
+                                        <td width="35%"><strong>Age:</strong></td>
+                                        <td width="65%">@Model.Age</td>
+                                    </tr>
+                                    <tr>
+                                        <td><strong>Ethnicity:</strong></td>
+                                        <td>@Model.Nationality</td>
+                                    </tr>
+                                    <tr>
+                                        <td><strong>Weight:</strong></td>
+                                        <td>@Model.Weight</td>
+                                    </tr>
+                                    <tr>
+                                        <td><strong>Height:</strong></td>
+                                        <td>@Model.Height</td>
+                                    </tr>
+                                    <tr>
+                                        <td><strong>Hair:</strong></td>
+                                        <td>@Model.Hair</td>
+                                    </tr>
+                                    <tr>
+                                        <td><strong>Languages:</strong></td>
+                                        <td>@Model.Languages</td>
+                                    </tr>
+                                    <tr>
+                                        <td><strong>Statstics:</strong></td>
+                                        <td>@Model.Statistics</td>
+                                    </tr>
+                                </table>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+        <div class="main_container featured_escort">
+            <div class="see_also_block">
+                <h2>You Might Also Like</h2>
+            </div>
+            @foreach (var p in Model.List)
+            {
+                var fileName = p.FileImages.First().FileName;
+                var refName = $"{p.EscortName.ToLower()}.php";
+
+                <div class="col-xs-12 col-sm-3 col-md-3 col-lg-3">
+                    <div class="escort_display">
+                        <div class="image_wrapper">
+                            <a href="/profile/@refName">
+                                <div class="escort_img">
+                                    <img class="img-responsive" src="/images/escorts/@fileName"
+                                         alt="Independent escort @p.EscortName"
+                                         title="Independent escort @p.EscortName" />
+                                </div>
+                                <div class="escort_name">@p.EscortName</div>
+                            </a>
+                        </div>
+                    </div>
+                </div>
+            }
+        </div>
+    </div>
+</div>
+

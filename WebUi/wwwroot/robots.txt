@@ -1,0 +1,32 @@
+User-agent: *
+
+Allow: /*.js
+Allow: /*.css
+Allow: /*.jpg
+Allow: /*.gif
+Allow: /*.png
+Allow: /fancybox
+Allow: /fonts
+Disallow: /Connections
+Disallow: /docs
+Disallow: /htmls
+Disallow: /include
+Disallow: /inventory
+Disallow: /404.php
+Disallow: /class.phpmailer.php
+Disallow: /class.pop3.php
+Disallow: /class.smtp.php
+Disallow: /send_booking.php
+Disallow: /send_contact.php
+Disallow: /show-captcha.php
+Disallow: /thankyou.php
+Allow: /maps/api/js?
+Allow: /maps/api/js/DirectionsService.Route
+Allow: /maps/api/js/DistanceMatrixService.GetDistanceMatrix
+Allow: /maps/api/js/ElevationService.GetElevationForLine
+Allow: /maps/api/js/GeocodeService.Search
+Allow: /maps/api/js/KmlOverlayService.GetFeature
+Allow: /maps/api/js/KmlOverlayService.GetOverlays
+Allow: /maps/api/js/LayersService.GetFeature
+
+Sitemap: https://www.vegasindependents.com/sitemap.xml
