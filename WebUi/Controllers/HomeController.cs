@@ -299,6 +299,25 @@ namespace WebUi.Controllers
                         .FirstOrDefault();
                     return View("bachelor-party");
 
+                case "nuru-massage.php":
+                    ViewBag.SiteTitle = texts.Where(z => z.Position == "SiteTitleNuruMassage").Select(z => z.Description)
+                        .FirstOrDefault();
+                    ViewBag.SiteDescription = texts.Where(z => z.Position == "SiteDescriptionNuruMassage").Select(z => z.Description)
+                        .FirstOrDefault();
+                    return View("nuru-massage");
+                case "happy-ending-massage.php":
+                    ViewBag.SiteTitle = texts.Where(z => z.Position == "SiteTitleHappyMassage").Select(z => z.Description)
+                        .FirstOrDefault();
+                    ViewBag.SiteDescription = texts.Where(z => z.Position == "SiteDescriptionHappyMassage").Select(z => z.Description)
+                        .FirstOrDefault();
+                    return View("happy-ending-massage");
+                case "fbsm-massage.php":
+                    ViewBag.SiteTitle = texts.Where(z => z.Position == "SiteTitleFBSMMassage").Select(z => z.Description)
+                        .FirstOrDefault();
+                    ViewBag.SiteDescription = texts.Where(z => z.Position == "SiteDescriptionFBSMMassage").Select(z => z.Description)
+                        .FirstOrDefault();
+                    return View("fbsm-massage");
+
                 default: return RedirectToAction("Error");
             }
         }

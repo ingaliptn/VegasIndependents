@@ -381,8 +381,8 @@
         //https://www.vegasindependents.com/
         public const string SiteNameSsl = "www.vegasindependents.com";
         public const string SiteName = "www.vegasindependents.com";
-        public const string SitePhone = "(702)323-8989";
-        public const string SitePhoneRef = "+17023238989";
+        public const string SitePhone = "702-843-6057";
+        public const string SitePhoneRef = "+17028436057";
         public const string SiteEmail = "info@vegasmassagegirls.com";
         public const string SiteContentLocation = "Las Vegas";
         public const string SiteCountry = "USA";

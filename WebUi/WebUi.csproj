@@ -29,4 +29,11 @@
     <Folder Include="wwwroot\images\escorts\_notes\" />
   </ItemGroup>
 
+  <ItemGroup>
+    <Content Update="Views\Home\fbsm-massage.cshtml">
+      <ExcludeFromSingleFile>true</ExcludeFromSingleFile>
+      <CopyToPublishDirectory>PreserveNewest</CopyToPublishDirectory>
+    </Content>
+  </ItemGroup>
+
 </Project>
